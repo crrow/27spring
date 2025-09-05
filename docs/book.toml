@@ -1,0 +1,9 @@
+[book]
+title = "27spring"
+authors = ["Ryan"]
+description = "My personal notes for 27spring."
+
+[output.html]
+default-theme = "ayu"
+git-repository-url = "https://github.com/crrow/27spring"
+edit-url-template = "https://github.com/crrow/27spring/edit/main/{path}"

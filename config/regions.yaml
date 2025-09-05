@@ -1,0 +1,180 @@
+# 地区生活成本配置
+# 按地理位置和生活成本水平分类
+
+regions:
+  # 美国地区
+  us:
+    texas:
+      name: "德克萨斯州"
+      cost_level: "中等"
+      living_cost_per_month: 1800  # 基础生活费 (USD)
+      cost_factors:
+        housing: 1.0      # 住房成本系数
+        food: 0.9         # 饮食成本系数  
+        transport: 0.8    # 交通成本系数
+        utilities: 0.9    # 公用事业成本系数
+      advantages:
+        - "无州所得税"
+        - "生活成本相对较低"
+        - "就业机会较多"
+    
+    california_bay_area:
+      name: "加州湾区（硅谷）"
+      cost_level: "极高"
+      living_cost_per_month: 4200  # 基础生活费 (USD)
+      cost_factors:
+        housing: 2.5      # 住房成本系数
+        food: 1.3         # 饮食成本系数
+        transport: 1.2    # 交通成本系数
+        utilities: 1.1    # 公用事业成本系数
+      advantages:
+        - "科技公司集中"
+        - "薪资水平最高"
+        - "创业机会多"
+      disadvantages:
+        - "生活成本极高"
+        - "竞争激烈"
+    
+    florida:
+      name: "佛罗里达州"
+      cost_level: "中等偏高"
+      living_cost_per_month: 2550  # 基础生活费 (USD)
+      cost_factors:
+        housing: 1.2
+        food: 1.0
+        transport: 0.9
+        utilities: 1.1
+      advantages:
+        - "无州所得税"
+        - "气候温暖"
+        - "旅游业发达"
+    
+    arizona:
+      name: "亚利桑那州"
+      cost_level: "中等"
+      living_cost_per_month: 2350  # 基础生活费 (USD)
+      cost_factors:
+        housing: 1.1
+        food: 0.95
+        transport: 0.9
+        utilities: 1.0
+      advantages:
+        - "科技产业发展"
+        - "税负相对较低"
+
+  # 加拿大地区  
+  canada:
+    ontario_major:
+      name: "安大略省主要城市（多伦多）"
+      cost_level: "高"
+      living_cost_per_month: 2200  # 基础生活费 (CAD)
+      cost_factors:
+        housing: 1.8
+        food: 1.1
+        transport: 1.0
+        utilities: 1.0
+      advantages:
+        - "就业机会最多"
+        - "金融科技中心"
+        - "华人社区完善"
+    
+    ontario_small:
+      name: "安大略省小城市"
+      cost_level: "中等"
+      living_cost_per_month: 1400  # 基础生活费 (CAD)
+      cost_factors:
+        housing: 0.8
+        food: 0.9
+        transport: 0.7
+        utilities: 0.9
+      advantages:
+        - "生活成本低"
+        - "安全宁静"
+        - "可转移到大城市工作"
+    
+    quebec:
+      name: "魁北克省（蒙特利尔）"
+      cost_level: "中等"
+      living_cost_per_month: 1600  # 基础生活费 (CAD)
+      cost_factors:
+        housing: 0.9
+        food: 0.95
+        transport: 0.8
+        utilities: 0.9
+      advantages:
+        - "生活成本适中"
+        - "双语环境"
+        - "移民政策友好"
+        - "文化多元"
+    
+    alberta:
+      name: "阿尔伯塔省（卡尔加里）"
+      cost_level: "中等"
+      living_cost_per_month: 1400  # 基础生活费 (CAD)
+      cost_factors:
+        housing: 0.9
+        food: 0.9
+        transport: 0.8
+        utilities: 1.1
+      advantages:
+        - "无省所得税"
+        - "能源行业发达"
+        - "生活成本适中"
+    
+    saskatchewan:
+      name: "萨斯喀彻温省"
+      cost_level: "低"
+      living_cost_per_month: 1200  # 基础生活费 (CAD)
+      cost_factors:
+        housing: 0.6
+        food: 0.8
+        transport: 0.7
+        utilities: 1.0
+      advantages:
+        - "生活成本最低"
+        - "移民政策最友好"
+        - "省提名门槛低"
+    
+    capital:
+      name: "首都地区（渥太华）"
+      cost_level: "中等偏高"
+      living_cost_per_month: 1800  # 基础生活费 (CAD)
+      cost_factors:
+        housing: 1.2
+        food: 1.0
+        transport: 0.9
+        utilities: 1.0
+      advantages:
+        - "政府科技岗位多"
+        - "双语环境"
+        - "稳定的就业市场"
+
+# 中国本土成本参考
+china:
+  shanghai:
+    name: "上海"
+    currency: "CNY"
+    reference_salary:
+      entry_level: 250000    # 入门级年薪
+      mid_level: 375000      # 中级年薪  
+      senior_level: 500000   # 高级年薪
+      management: 800000     # 管理层年薪
+    living_costs:
+      housing_rent: 4000     # 月租房费用
+      food: 1500             # 月饮食费用
+      transport: 500         # 月交通费用
+      utilities: 300         # 月水电费
+      entertainment: 1000    # 月娱乐费用
+      insurance: 800         # 月社保公积金
+      total_monthly: 8100    # 月总生活成本
+      total_yearly: 97200    # 年总生活成本
+    tax_info:
+      income_tax_rate: 0.15  # 个人所得税率
+      social_insurance: 0.105 # 社保公积金率
+      total_tax_rate: 0.282  # 综合税负率
+
+exchange_rates:
+  usd_to_cny: 7.2
+  cad_to_usd: 0.73
+  cad_to_cny: 5.26  # CAD to CNY direct
+  last_updated: "2024-01-01"

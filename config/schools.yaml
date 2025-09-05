@@ -1,0 +1,417 @@
+# 学校配置文件
+# 按国家和类型分类
+
+schools:
+  # 美国学校
+  us:
+    # 匹配院校 - 录取概率较高，综合条件匹配
+    target:
+      - name: "Texas A&M University"
+        short_name: "TAMU"
+        website: "https://www.tamu.edu/"
+        program: "MS in Computer Science"
+        tuition_per_year: 26000  # USD
+        region: "texas"
+        ranking:
+          csrankings: 48
+          category: "匹配院校"
+        academic_requirements:
+          gpa_min: 3.0
+          gre_required: true
+          toefl_min: 80
+          ielts_min: 6.0
+        program_details:
+          total_credits: 30
+          courses_required: 10
+          min_semesters: 4
+          fast_track_semesters: 3
+          thesis_required: false
+        benefits:
+          - "OPT: 1年 + 2年STEM延期"
+          - "CPT实习机会"
+          - "排名不错且成本最低"
+        estimated_costs:
+          three_semester_total: 66000  # 3学期总成本
+          two_year_total: 95200        # 2年总成本
+
+      - name: "University of Texas at Dallas"
+        short_name: "UTD"
+        website: "https://www.utdallas.edu/"
+        program: "MS in Computer Science"
+        tuition_per_year: 28530  # USD
+        region: "texas"
+        ranking:
+          csrankings: 52
+          category: "匹配院校"
+        academic_requirements:
+          gpa_min: 3.0
+          gre_required: true
+          toefl_min: 80
+          ielts_min: 6.5
+        program_details:
+          total_credits: 33
+          courses_required: 11
+          min_semesters: 4
+          fast_track_semesters: 3
+          thesis_required: false
+        benefits:
+          - "OPT: 1年 + 2年STEM延期"
+          - "CPT实习机会"
+          - "33学分充实学习"
+        estimated_costs:
+          three_semester_total: 83295
+          two_year_total: 111060
+
+      - name: "University of Central Florida"
+        short_name: "UCF"
+        website: "https://www.ucf.edu/"
+        program: "MS in Computer Science"
+        tuition_per_year: 25566  # USD
+        region: "florida"
+        ranking:
+          csrankings: 60
+          category: "匹配院校"
+        academic_requirements:
+          gpa_min: 3.0
+          gre_required: true
+          toefl_min: 80
+          ielts_min: 6.5
+        program_details:
+          total_credits: 30
+          courses_required: 10
+          min_semesters: 4
+          fast_track_semesters: 3
+          thesis_required: false
+        benefits:
+          - "OPT: 1年 + 2年STEM延期"
+          - "CPT实习机会"
+          - "佛州无州税"
+        estimated_costs:
+          three_semester_total: 77199
+          two_year_total: 112332
+
+      - name: "Arizona State University"
+        short_name: "ASU"
+        website: "https://www.asu.edu/"
+        program: "Master of Computer Science (MCS)"
+        tuition_per_year: 32352  # USD
+        region: "arizona"
+        ranking:
+          csrankings: 48
+          category: "匹配院校"
+        academic_requirements:
+          gpa_min: 3.0
+          gre_required: true
+          toefl_min: 79
+          ielts_min: 7.0
+          ielts_section_min: 6.0
+        program_details:
+          total_credits: 30
+          courses_required: 10
+          min_semesters: 4
+          fast_track_semesters: 3
+          thesis_required: false
+        benefits:
+          - "OPT: 1年 + 2年STEM延期"
+          - "CPT实习机会"
+          - "排名较好"
+        estimated_costs:
+          three_semester_total: 90828
+          two_year_total: 121104
+
+    # 保底院校 - 确保有学校可上
+    safety:
+      - name: "San Jose State University"
+        short_name: "SJSU"
+        website: "https://www.sjsu.edu/"
+        program: "MS in Computer Science"
+        tuition_per_year: 18972  # USD
+        region: "california_bay_area"
+        ranking:
+          csrankings: null
+          category: "保底院校"
+        academic_requirements:
+          gpa_min: 2.5  # 最低GPA要求
+          gre_required: true
+          toefl_min: 80
+          ielts_min: 6.5
+        program_details:
+          total_credits: 30
+          courses_required: 10
+          min_semesters: 4
+          fast_track_semesters: 3
+          thesis_required: false
+        benefits:
+          - "OPT: 1年 + 2年STEM延期"
+          - "CPT实习机会"
+          - "硅谷地理位置优势"
+          - "就业前景良好"
+        estimated_costs:
+          three_semester_total: 91758
+          two_year_total: 138744
+
+    # 冲刺院校 - 顶尖名校，录取难度高
+    reach:
+      - name: "The University of Texas at Austin"
+        short_name: "UT Austin"
+        website: "https://www.utexas.edu/"
+        program: "MS in Computer Science"
+        tuition_per_year: 40360  # USD (估算)
+        region: "texas"
+        ranking:
+          csrankings: 8
+          category: "冲刺院校"
+        academic_requirements:
+          gpa_min: 3.0
+          gre_required: true
+          toefl_min: 79
+          ielts_min: 6.5
+          competition_level: "极高"
+        program_details:
+          total_credits: 30
+          courses_required: 10
+          min_semesters: 4
+          fast_track_semesters: 3
+          thesis_required: false
+        benefits:
+          - "OPT: 1年 + 2年STEM延期"
+          - "CPT实习机会"
+          - "顶级CS项目"
+          - "TA机会很多"
+        estimated_costs:
+          three_semester_total: 92940
+          two_year_total: 123920
+
+  # 加拿大学校
+  canada:
+    # 基础院校选项
+    basic:
+      - name: "University of Calgary"
+        short_name: "UCalgary"
+        website: "https://www.ucalgary.ca/"
+        program: "MSc Computer Science"
+        tuition_per_year: 16812  # CAD
+        region: "alberta"
+        ranking:
+          national: "加拿大前10"
+          category: "推荐院校"
+        academic_requirements:
+          gpa_min: 3.0
+          gre_required: false
+          ielts_min: 6.5
+          ielts_section_min: 6.0
+          accepts_work_experience: true
+        program_details:
+          program_type: "Coursework"
+          min_semesters: 4
+          fast_track_semesters: 3
+          thesis_required: false
+          coop_available: true
+        benefits:
+          - "3年PGWP毕业工签"
+          - "Co-op带薪实习"
+          - "接受工作经验"
+        estimated_costs:
+          three_semester_total: 46218  # CAD
+          two_year_total: 67224         # CAD
+
+      - name: "University of Saskatchewan"
+        short_name: "USask"
+        website: "https://www.usask.ca/"
+        program: "MSc Computer Science"
+        tuition_per_year: 12400  # CAD
+        region: "saskatchewan"
+        ranking:
+          national: "加拿大前15"
+          category: "匹配院校"
+        academic_requirements:
+          gpa_min: 3.0
+          gre_required: false
+          ielts_min: 6.5
+          toefl_min: 80
+        program_details:
+          program_type: "Coursework"
+          min_semesters: 4
+          fast_track_semesters: 3
+          thesis_required: false
+          coop_available: true
+        benefits:
+          - "3年PGWP毕业工签"
+          - "Co-op带薪实习"
+          - "萨省移民优势"
+        estimated_costs:
+          three_semester_total: 36600  # CAD
+          two_year_total: 53600         # CAD
+
+      - name: "Lakehead University"
+        short_name: "Lakehead"
+        website: "https://www.lakeheadu.ca/"
+        program: "MSc Computer Science"
+        tuition_per_year: 5720   # CAD
+        region: "ontario_small"
+        ranking:
+          category: "保底院校"
+        academic_requirements:
+          gpa_min: 2.4  # 最低GPA要求
+          gre_required: false
+          ielts_min: 6.5
+          ielts_section_min: 6.0
+          dual_admission: true
+        program_details:
+          program_type: "Coursework"
+          min_semesters: 4
+          fast_track_semesters: 3
+          thesis_required: false
+          coop_available: true
+        benefits:
+          - "3年PGWP毕业工签"
+          - "Co-op项目"
+          - "GPA要求最低"
+          - "双录取可选"
+        estimated_costs:
+          three_semester_total: 25080  # CAD
+          two_year_total: 37840         # CAD
+
+      - name: "Laurentian University"
+        short_name: "Laurentian"
+        website: "https://laurentian.ca/"
+        program: "MSc Computer Science"
+        tuition_per_year: 5720   # CAD
+        region: "ontario_small"
+        ranking:
+          category: "保底院校"
+        academic_requirements:
+          gpa_min: 2.4
+          gre_required: false
+          ielts_min: 6.5
+          ielts_section_min: 6.0
+          dual_admission: true
+        program_details:
+          program_type: "Coursework"
+          min_semesters: 4
+          fast_track_semesters: 3
+          thesis_required: false
+          coop_available: true
+        benefits:
+          - "3年PGWP毕业工签"
+          - "Co-op实习"
+          - "双录取"
+        estimated_costs:
+          three_semester_total: 25980  # CAD
+          two_year_total: 40240         # CAD
+
+    # 大城市选项
+    major_cities:
+      - name: "Concordia University"
+        short_name: "Concordia"
+        website: "https://www.concordia.ca/"
+        program: "MSc Computer Science"
+        tuition_per_year: 13000  # CAD
+        region: "quebec"
+        ranking:
+          national: "加拿大前20"
+          category: "大城市推荐"
+        academic_requirements:
+          gpa_min: 3.0
+          gre_required: false
+          ielts_min: 7.0
+          toefl_min: 100
+          accepts_work_experience: true
+        program_details:
+          program_type: "Coursework"
+          min_semesters: 4
+          fast_track_semesters: 3
+          thesis_required: false
+          coop_available: true
+        benefits:
+          - "3年PGWP毕业工签"
+          - "Co-op实习项目"
+          - "接受工作经验"
+          - "双语优势"
+          - "移民加分"
+        estimated_costs:
+          three_semester_total: 43500  # CAD
+          two_year_total: 64400         # CAD
+
+      - name: "York University"
+        short_name: "York"
+        website: "https://www.yorku.ca/"
+        program: "MSc Computer Science"
+        tuition_per_year: 18000  # CAD
+        region: "ontario_major"
+        ranking:
+          national: "加拿大前15"
+          category: "大城市选择"
+        academic_requirements:
+          gpa_min: 3.0
+          gre_required: false
+          ielts_min: 7.0
+          toefl_min: 100
+          work_experience_bonus: true
+        program_details:
+          program_type: "Coursework"
+          min_semesters: 4
+          fast_track_semesters: 3
+          thesis_required: false
+        benefits:
+          - "3年PGWP毕业工签"
+          - "实习机会丰富"
+          - "多伦多就业机会"
+          - "工作经验加分"
+        estimated_costs:
+          three_semester_total: 60000  # CAD
+          two_year_total: 88800         # CAD
+
+      - name: "Carleton University"
+        short_name: "Carleton"
+        website: "https://carleton.ca/"
+        program: "MSc Computer Science"
+        tuition_per_year: 14400  # CAD
+        region: "capital"
+        ranking:
+          national: "加拿大前15"
+          category: "大城市选择"
+        academic_requirements:
+          gpa_min: 3.0
+          gre_required: false
+          ielts_min: 6.5
+          ielts_section_min: 6.0
+        program_details:
+          program_type: "Coursework"
+          min_semesters: 4
+          fast_track_semesters: 3
+          thesis_required: false
+        benefits:
+          - "3年PGWP毕业工签"
+          - "政府实习机会"
+          - "首都优势"
+        estimated_costs:
+          three_semester_total: 48600  # CAD
+          two_year_total: 72000         # CAD
+
+      - name: "University of Ottawa"
+        short_name: "uOttawa"
+        website: "https://www.uottawa.ca/"
+        program: "MSc Computer Science"
+        tuition_per_year: 17000  # CAD
+        region: "capital"
+        ranking:
+          national: "加拿大前10"
+          category: "大城市选择"
+        academic_requirements:
+          gpa_min: 3.0
+          gre_required: false
+          ielts_min: 7.0
+          toefl_min: 100
+        program_details:
+          program_type: "Coursework"
+          min_semesters: 4
+          fast_track_semesters: 3
+          thesis_required: false
+        benefits:
+          - "3年PGWP毕业工签"
+          - "政府科技实习"
+          - "双语环境"
+        estimated_costs:
+          three_semester_total: 52500  # CAD
+          two_year_total: 77200         # CAD
