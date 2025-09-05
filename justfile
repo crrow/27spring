@@ -17,3 +17,6 @@ alias c := check
 
 tui:
     cargo run -- tui
+
+run:
+    cargo run
