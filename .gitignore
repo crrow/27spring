@@ -7,6 +7,11 @@
 ehthumbs.db
 Thumbs.db
 
+# Database Files
+data/
+*.db
+*.sqlite
+
 # Editor and IDE Files
 .vscode/
 .idea/
@@ -164,3 +169,5 @@ site/
 # Added by cargo
 
 /target
+
+*.png

@@ -4,27 +4,27 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-confy = "0.6"
-serde = { version = "1.0", features = ["derive"] }
-serde_yaml = "0.9"
-serde_json = "1.0"
-clap = { version = "4.0", features = ["derive"] }
-ratatui = "0.28"
-crossterm = "0.28"
-tokio = { version = "1.0", features = ["full"] }
-rand = "0.8"
-chrono = { version = "0.4", features = ["serde"] }
-dirs = "5.0"
-rusqlite = { version = "0.31.0", features = ["chrono"] }
-reqwest = { version = "0.12", features = ["blocking", "json"] }
-urlencoding = "2.1"
-thiserror = "1.0"
-sea-orm = { version = "0.12", features = [
-    "sqlx-sqlite",
-    "runtime-tokio-rustls",
-    "macros",
-    "chrono",
-] }
+anyhow = "1.0.99"
 async-trait = "0.1"
-scraper = "0.18"
-select = "0.6"
+chrono = { version = "0.4", features = ["serde"] }
+clap = { version = "4.0", features = ["derive"] }
+confy = "0.6"
+crossterm = "0.28"
+dialoguer = "0.11.0"
+diesel = { version = "2.1.0", features = ["sqlite", "chrono", "uuid"] }
+diesel_migrations = "2.1.0"
+dirs = "5.0"
+dotenvy = "0.15"
+plotters = "0.3.7"
+rand = "0.8"
+ratatui = "0.28"
+reqwest = { version = "0.12", features = ["blocking", "json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+smart-default = "0.7.1"
+tabled = "0.20.0"
+thiserror = "1.0"
+tokio = { version = "1.0", features = ["full"] }
+turso = "0.1.4"
+urlencoding = "2.1"
+uuid = { version = "1.0", features = ["v4", "serde"] }
